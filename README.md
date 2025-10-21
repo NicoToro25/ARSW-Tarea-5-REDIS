@@ -1,6 +1,6 @@
-# Arquitecturas de Software (ARSW) - Tarea #4
+# Arquitecturas de Software (ARSW) - Tarea #
 
-## Introducción a React-JS
+## REDIS Publish Subscribe
 
 #### Nicolás Toro
 
@@ -9,11 +9,7 @@
 
 ---
 
-En este repositorio se muestra la solución a la tarea 4, cuyo enunciado se encuentra en el repositorio en forma de pdf.
-Sin embargo, se podrá revisar el paso a paso en este archivo.
-
-El propósito de esta tarea es comprender REACT desde un punto de vista de arquitectura, implementando una arquitectura
-cliente-servidor, donde se especifica la separación de responsabilidad entre el cliente (front-end) y el servidor(back-end).
+SOLUCIÓN
 
 
 ## Estructura del laboratorio
@@ -87,7 +83,7 @@ mvn -version
 Si aún no tiene el repositorio localmente, clónelo con:
 
 ```bash
-git clone https://github.com/NicoToro25/ARSW-Laboratorio-5-Blueprints-CSS-JS.git
+git clone https://github.com/NicoToro25/ARSW-Tarea-5-REDIS.git
 ```
 
 #### 3. Compilar los proyectos
@@ -115,104 +111,21 @@ Si se tiene algún inconveniente con la ejecución, asegúrarse de que las varia
 
 ## Arquitectura de la aplicación
 
+![img](img/arquitectura.png)
 
-![arquitectura](img/arquitectura.png)
+## Parte 1. Prepare una aplicación MAVEN.
 
-### Creando el ambiente de trabajo
+Se creó una aplicación MAVEN desde el springboot initializr, de la siguiente forma.
 
-1. Para la creación del ambiente de trabajo, se tomó la decisión de crear la aplicación desde la siguiente página 
-https://start.spring.io/ donde se utilizó Java 17, Maven y Spring Boot 3.5.6.
+![img](img/springbootInitializr.png)
 
-![initializr](img/initializr.png)
+## Parte 2. Configure el POM.
 
-2. Se actualizó el pom.xml con las configuraciones de web-MVC de spring boot.
+Se configuró el POM adecuadamente para que la dependencia de REDIS fuera instalada adecuadamente.
+Para ver más información, revise el POM.xml
 
-![pom](img/pom.png)
+## Parte 3. Cree la aplicación.
 
-3. Se creó la clase que iniciará el servidor de aplicaciones de Spring con la configuración mínima Web-MVC
 
-![img](img/WebSiteController.png)
 
-4. Se creó el index.html
-
-![img](img/index.png)
-
-5. Se corre la clase recién creada, para que se puediera ejecutar de forma adecuada se tuvo que eliminar la clase DemoApplication
-que se crea por defecto, con eso nos dió el sigueinte resultado.
-
-![img](img/programaCorriendo.png)
-
-6. Se accedió a localhost:8080/status
-
-![img](img/Funcionando.png)
-
-7. Se accedio a localhost:8080/index.html
-
-![img](img/localhostIndex.png)
-
-### ReactJs
-
-ReactJs es un librería javascript que me permite crear clientes web pesados, dinámicos y flexibles. Es decir es una
-alternativa al estilo tradicional de aplicaciones web donde un servidor calcula la
-respuesta y me envía una página html para cada petición.
-
-En cambio ReactJS, crea una aplicación completa corriendo en el browser que
-interactúa de forma dinámica con el servidor web, pero que no tiene necesariamente
-que cargar una página ante cada petición.
-
-En React el programador adicionalmente puede migrar sitios web tradicionales hacia
-aplicaciones de una sola página por ejemplo, es decir del estado Gmail, Facebook, o
-twitter.
-
-Es mucho mejor alternativa que Angular, ya que desde el punto de vista de
-arquitectura simplemente propone una librería de JS. No altera el modelo de
-funcionamiento normal del browser y no propone un lenguaje nativo, implementado
-con meta-información, como lo hace Angular.
-
-Al aprender React usted aprenderá conceptos avanzados de JS.
-
-#### JSX
-
-JSX es una extensión de sintaxis a JS. JSX permite embeber código HTML dentro de
-componentes Js. 
-
-```bash
-const hellomsg = <h1>Hello, world!</h1>;
-```
-
-Esto no genera una cadena o HTML, en cambio, genera un elemento de React. Más de
-esto adelante.
-
-### Mi primer ejemplo React
-
-Se agregó el código dado al index.html con el propósito de cargar REACT y Babel que permite interpretar JSX en desarrollo.
-
-![img](img/loadReact.png)
-![img](img/loadBabel.png)
-
-Se creó el primer componente
-
-![img](img/addFirstComponent.png)
-
-![img](img/contentFirstComponent.png)
-
-Se añadió el elemento root al index.html
-
-![img](img/root.png)
-
-Se verificó el correcto funcionamiento de la aplicación.
-
-![img](img/HelloWorld.png)
-
-### Actualizando elementos del DOM
-
-Se creó y se invocó el método render de DOM en un código estático.
-
-![img](img/componenteEstatico.png)
-
-Se creó un código dinámico
-
-![img](img/codigoDinamico.png)
-![img](img/dinamicFuncionando.png)
-
-### Componentes y props
+## Parte 4. 
