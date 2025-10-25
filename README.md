@@ -135,3 +135,5 @@ Se crea el productor.
 ## Parte 4. Ejecute la aplicación
 
 Se ejecuta exitosamente el programa.
+
+![img](img/dockerRun.png)
