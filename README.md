@@ -126,6 +126,34 @@ Para ver más información, revise el POM.xml
 
 ## Parte 3. Cree la aplicación.
 
+Se creó la clase principal para carga Spring y arrancar la aplicación.
 
+![img](img/AppStarter.png)
 
-## Parte 4. 
+Se creó una clase para configurar parámetros de conexión a REDIS y crear una fábrica de conexiones para REDIS.
+
+![img](img/connection.png)
+
+Además, se agregó la información brindada al "application.properties", esto para cargar los valores de propiedad que la aplicación requiera.
+
+![img](img/appProperties.png)
+
+Se define un intermediario de conexión a los diferentes listeners.
+
+![img](img/listenerContainer.png)
+
+Se define la clase template que permite recibir mensajes de tipo String.
+
+![img](img/template.png)
+
+Se crea una clase receptora cuya principal tarea es recibir los mensajes concretos.
+
+![img](img/receiver.png)
+
+Se crea el productor.
+
+![img](img/producer.png)
+
+## Parte 4. Ejecute la aplicación
+
+Se ejecuta exitosamente el programa.
