@@ -15,49 +15,27 @@ SOLUCIÓN
 ## Estructura del laboratorio
 
 ```bash
-├── .idea/                          # Configuración propia de IntelliJ IDEA
-├── .mvn/                           # Configuración del wrapper de Maven
-│   └── wrapper/                    # Scripts y configuraciones del Maven Wrapper
-├── img/                            # Carpeta de imágenes para la documentación
-│   └── media/                      # Recursos gráficos de apoyo
-├── src/                            # Código fuente del proyecto
-│   ├── main/                       # Código principal
-│   │   └── java/                   
-│   │       └── edu/eci/arsw/blueprints/
-│   │           ├── controllers/    # Controladores REST (exponen la API)
-│   │           ├── filter/         # Interfaces para aplicar filtros a planos
-│   │           │   └── impl/       # Implementaciones concretas de filtros
-│   │           ├── model/          # Clases del modelo (Blueprint, Point, etc.)
-│   │           ├── persistence/    # Interfaces de persistencia
-│   │           │   └── impl/       # Implementación en memoria de la persistencia
-│   │           └── services/       # Lógica de negocio (servicios)
-│   └── test/                       # Código de pruebas
-│       └── java/
-│           └── edu/eci/arsw/blueprints/test/
-│               └── persistence/
-│                   └── impl/       # Pruebas unitarias para la capa de persistencia
-└── target/                         # Archivos generados por Maven (build)
-    ├── classes/                    # Archivos compilados del main
-    │   └── edu/eci/arsw/blueprints/
-    │       ├── controllers/        
-    │       ├── filter/impl/
-    │       ├── model/
-    │       ├── persistence/impl/
-    │       └── services/
-    ├── generated-sources/          # Fuentes generadas automáticamente
-    │   └── annotations/
-    ├── generated-test-sources/     # Fuentes de pruebas generadas
-    │   └── test-annotations/
-    ├── maven-archiver/             # Metadatos del build Maven
-    ├── maven-status/               # Estado del compilador de Maven
-    │   └── maven-compiler-plugin/
-    │       ├── compile/default-compile/
-    │       └── testCompile/default-testCompile/
-    ├── surefire-reports/           # Reportes de ejecución de pruebas
-    └── test-classes/               # Archivos compilados de test
-        └── edu/eci/arsw/blueprints/test/
-            └── persistence/impl/
-
+├───.idea
+├───.mvn
+│   └───wrapper
+├───img
+└───src
+    ├───main
+    │   ├───java
+    │   │   └───edu
+    │   │       └───eci
+    │   │           └───arsw
+    │   │               └───redis
+    │   │                   ├───connection
+    │   │                   ├───producer
+    │   │                   └───receiver
+    │   └───resources
+    └───test
+        └───java
+            └───edu
+                └───eci
+                    └───arsw
+                        └───redis
 ```
 ---
 
